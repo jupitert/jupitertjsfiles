@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <script>
+        // TO FIND OUT EVEN NOs
+        function isEven(even){
+        	// if (even % 2 == 0){
+        	// 	return true;
+        	// }
+        	// else{
+        	// 	return false;
+        	// }
+
+        	return even % 2 === 0;
+        }
+        isEven(9);
+
+        //FACTORIAL
+        
+        function factorial(num){//5
+        	if (num === 0){
+        		return 1;
+        	}
+        	// define result variable
+        	//var result= 1;
+        	var result= num;//5
+        	// calculate factorial and store it in result variable
+        	// for (var i=2; i<=num; i++){
+        	// 	result= result * i; // 1 * 2 =2, 2* 3= 6, 6* 4= 24, 24 * 5= 120
+        	// }
+        	// OR
+        	for (var i=num-1; i>=1; i--){ //4, yes, 3
+        		result= result * i; //5*4= 20, 20 * 3=60, 60 * 2= 120, 120 * 1= 0
+        	}
+        	// return the result variable
+        	return result;
+     	}
+
+        // kebab to snake
+
+        function kebabtosnake(str){
+        	//var input= str.split('');
+        	var input=  str.replace(/-/g,'_');
+        	console.log(input);
+        }
+        kebabtosnake('hello-world');
+
+        </script>
+		
+   
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <p>Functions and methods , sounds good?</p>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      
+
+  
+    </body>
+</html>

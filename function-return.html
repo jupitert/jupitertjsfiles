@@ -10,19 +10,30 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <script>
-			function callMe(){
-				console.log('Hello there');
-			}
 
-			callMe();
-			// FUNCTIONS with ARGUMENTS
-			function doMaths(width,height){
-				var area= width * height;
-				console.log('the area is '+ area)
+		function calculate(x){ 
+			return x * x;
+		}
+		var result= calculate(108);
+			console.log(result);
+
+		// FUNCTION DECLARATION
+		function capitalize(c){
+			if (typeof c === 'number'){
+				console.log('thats not a string dude!');
 			}
-			doMaths(22,43);
-			
+			else{
+				return c.charAt(0).toUpperCase() + c.slice(1);
+			}
+		}
+		// FUNCTION EXPRESSION
+		var capital= function(c){
+			return c.charAt(0).toUpperCase() + c.slice(1);
+		}
+		var city= capitalize('shankar veerakandhan');
+		console.log(city);
         </script>
+		
    
     </head>
     <body>
