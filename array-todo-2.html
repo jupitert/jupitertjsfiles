@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+           <h4>To Do list</h4>
+           <ul class="mdl-list">
+               <li class="mdl-list-item">new - add the items</li>
+               <li class="mdl-list-item">list - list all the </li>
+               <li class="mdl-list-item">delete - delete the list using the index value</li>
+               <li class="mdl-list-item">quit - quit the prompt</li>
+           </ul>
+       </div>
+       <script>
+           //Array built in methods ... push, pop, unshift, shift, indexOf, slice
+
+           var array=[];
+           var answer= prompt('what would you like to do');
+
+
+           while(answer !== 'quit'){
+
+               if(answer === 'new'){
+                  addToDo();
+               }
+               else if(answer === 'list'){
+                  listToDo();
+
+               }
+               else if(answer == 'delete'){
+                  deleteToDo();
+               }
+
+               answer= prompt('what would you like to do');
+
+           }
+           console.log('Ok, you have Quit');
+
+           function listToDo(){
+                console.log('***************');
+
+                array.forEach(function(item,i){
+                    //console.log(array.indexOf(item)+' : '+item); OR
+                    console.log(i+' : '+item);
+                })
+
+                console.log('***************');
+            }
+           function addToDo(){
+                 var item= prompt('enter the item');
+                 array.push(item)
+                 console.log('Todo is added')
+             }
+
+           function deleteToDo(){
+               var index= prompt('which index you want to delete?');
+               // NEW method for deleting apart from pop and shift
+               console.log('Item deleted......index is '+index+ ' delete item is '+ array[index]);
+               array.splice(index,1);
+
+           }
+       </script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>

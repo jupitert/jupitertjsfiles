@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+           <h4>To Do list</h4>
+           <ul class="mdl-list">
+               <li class="mdl-list-item">new - add the items</li>
+               <li class="mdl-list-item">list - list all the </li>
+               <li class="mdl-list-item">delete - delete the list using the index value</li>
+               <li class="mdl-list-item">quit - quit the prompt</li>
+           </ul>
+       </div>
+       <script>
+
+           //1, print reverse
+           console.log('****** print it reverse ******')
+           function printReverse(list){
+               for(var i=list.length-1; i>=0; i--){
+                   console.log(list[i]);
+               }
+           }
+           printReverse([1,2,3,4,5,6]);
+//           printReverse(['a','b','c','d']);
+
+           // 2.check whether all the items in the array are identical;
+           console.log('****** Identical text ******');
+           function isIdentical(val){
+               var store=val[0];
+//               var output;
+//               for (var i=0; i< val.length; i++){
+//                    if(store !== val[i]){
+//                        output= 'false';
+//                    }
+//                    else{
+//                        output= 'true';
+//                    }
+//                }
+//
+//               if(output !== 'false'){
+//                    console.log('True')
+//               }
+//               else{
+//                   console.log('False')
+//               }
+               for(var i=1; i<val.length; i++){
+                   if(val[i] !== store){
+                       return false;
+                   }
+               }
+               //other way using forEach but should n't be using it
+
+//               val.forEach(function(num){
+//                   if(val[i] !== store){
+//                       return false; //it only exits the current function and goes to execute the next line i.e return true so u never get false even the condition met
+//                   }
+//               });
+               return true;
+           }
+           isIdentical([1,1,1,1]);
+
+           //3.summing up the array
+           console.log('****** Sum up the array ******');
+           function sumArray(val){
+               var sum=0;
+                val.forEach(function(num){
+                    sum= sum + num;
+                })
+               console.log(sum);
+           }
+           sumArray([1,2,3]);
+
+
+           //4.finding out the max
+           console.log('****** max num in the array ******');
+           function max(val){
+//               var output=0;
+//               var count=0;
+//               while(output < val[count]){
+//                    output= val[count];
+//                    count++;
+//               }
+               var max= val[0];
+               for (var i=1; i< val.length; i++){
+                   if(val[i] > max){
+                       max= val[i];
+                   }
+               }
+               console.log(max);
+           }
+           max([101,2,3,32,43,91]);
+
+       </script>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>

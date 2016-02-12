@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            //for loop for array iteration
+            var holder= ['green','red','orange','blue','magenta'];
+
+            for (var i=0; i<holder.length;i++){
+                console.log(holder[i]);
+            }
+
+            //for each for array iteration. this method is new and came up in 2009 around..
+            // arr.forEach(somefunction);
+            console.log('.................below is foreach method')
+
+            holder.forEach(function(color){
+                console.log(color);
+            })
+
+            function printColor(color){
+                console.log(color);
+            }
+            console.log('...........foreach with custom function..no need for parenthesis');
+            holder.forEach(printColor);
+
+            //can use while loop too.....
+            console.log('...........while loop stuff');
+            //define the value
+            var count=0;
+
+            while(count < holder.length){
+
+                console.log(holder[count]);
+                //don't forget to increment else face the heat :)
+                count++;
+            }
+
+            var numbers=[1,2,3,4,5,6,7,8,9,10];
+
+            for (var i=0; i< numbers.length; i++){
+                if (numbers[i] % 3 == 0){
+                    console.log(numbers[i]);
+                }
+            }
+
+
+        </script>
+   
+    </head>
+    <body>
+
+
+        <!-- Add your site or application content here -->
+        <p>Array Iteration look into the console</p>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>

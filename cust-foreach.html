@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+           <h4>For Each Customisation</h4>
+
+       </div>
+       <script>
+
+            var colors=['red', 'blue','green'];
+
+            //we can create our own function to execute
+
+            var myForEach= function(arr, func){
+                for(var i=0;i<arr.length;i++){
+                    func(arr[i]);
+                }
+            }
+
+             //myForEach(colors,alert);
+            console.log('****** using custom myeach function ******');
+             myForEach(colors, function(color){console.log(color)})
+
+
+           //using prototype we can create our own method for arrays and objects
+
+           Array.prototype.myCustEach= function(func){
+                for(var i=0; i<this.length; i++){
+                    func(this[i]);
+                }
+           }
+
+           var friends= ['shank','vasa','John'];
+            console.log('****** using prototype ******');
+           friends.myCustEach(function(name){
+               console.log(name);
+           })
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>

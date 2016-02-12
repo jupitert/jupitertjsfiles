@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            //Array built in methods ... push, pop, unshift, shift, indexOf, slice
+            
+            var array=[];
+            var answer= prompt('what would you like to do');
+
+
+            while(answer !== 'quit'){
+
+                if(answer === 'new'){
+                    var item= prompt('enter the item');
+                    array.push(item)
+
+                }
+                else if(answer === 'list'){
+                    console.log(array);
+
+                }
+
+                answer= prompt('what would you like to do');
+
+            }
+            console.log('Ok, you have Quit');
+
+
+
+        </script>
+   
+    </head>
+    <body>
+
+
+        <!-- Add your site or application content here -->
+        <p>Hooray Array</p>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>
