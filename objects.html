@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+           <h4>Objects</h4>
+
+       </div>
+       <script>
+            var car= {
+                name :'tucson',
+                make: 2002
+            }
+           console.log(car);
+            //bracket notation
+           car["brand"]='Hyundai';
+           console.log(car);
+            //dot notation
+           car.make= 2004;
+           console.log(car);
+
+            var persons={
+                name:'johny',
+                age:32,
+                city:'Chennai'
+            }
+
+           console.log(persons.name); //very common way , should not use this if the property starts with number....should not use if the property has spaces
+           console.log(persons['age']);//can look up variable using bracket notation
+           persons.age +=1;
+            console.log(persons['age'])
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>
