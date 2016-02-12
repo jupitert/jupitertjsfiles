@@ -7,22 +7,42 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
-            // var colors=['red','green','pink'];
-            // undefined
-            // colors
-            // ["red", "green", "pink"]
-            // typeof colors
-            // "object"
+            //Array built in methods ... push, pop, unshift, shift, indexOf, slice
 
+            var colors=['red','green','pink','blue','rose','magenta'];
+            console.log(colors);
 
-            
+            var type= typeof colors;
+            console.log(type);
+
+            colors.push('push');
+            console.log('after pushing push....'+colors);
+
+            colors.pop();
+            console.log('after pop....'+colors);
+
+            colors.unshift('unshift');
+            console.log('after adding to the front....'+colors);
+
+            var storeremoved= colors.shift();
+            console.log('after removing from the front and storing it in var....'+storeremoved);
+
+            if (colors.indexOf('green')){
+                var index=  colors.indexOf('berry');
+                console.log(index);
+
+            }
+            else{
+                console.log('no the colors not present');
+            }
+
+            var sliced= colors.slice(2,5);
+            console.log('slice thing...'+ sliced);
         </script>
    
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+
 
         <!-- Add your site or application content here -->
         <p>Hooray Array</p>
