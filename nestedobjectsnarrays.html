@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+           <h4>Objects</h4>
+
+       </div>
+       <script>
+          var posts=[
+              {
+                  title:'Signs',
+                  author:'M Night Shyamalan',
+                  comments:['thriller','boring']
+              },
+              {
+                  title:'Inception',
+                  author:'Chris Nolan',
+                  comments: ['awesome novel', 'mediocre novel']
+              }
+          ]
+
+           var myEach= function(func, arr){
+
+               for(var i=0; i<arr.length;i++){
+                   func(arr[i]);
+               }
+
+           }
+
+           myEach(function(x){console.log(x.title)},posts);
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>
