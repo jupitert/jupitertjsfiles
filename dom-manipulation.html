@@ -6,16 +6,27 @@
         <title></title>
         <meta name="description" content="">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-
+        <style>
+            .highlight{
+                color:white;
+                background:green;
+            }
+        </style>
     </head>
     <body>
 
        <div class="container">
-           <h1>I'm an h1!</h1>
+           <a href="http://www.jupiter-t.com">JupiterT</a>
+           <h1>Beauties</h1>
            <p id="first" class="special">Hello</p>
-           <p class="special"> Good Bye</p>
-           <p>Hi Again!</p>
-           <p id="last">Good Bye again!</p>
+          <ul>
+              <li><strong>Deepika</strong></li>
+              <li>Ritika</li>
+              <li>Alia Bhatt</li></ul>
+
+           <!--<img src="http://static.dnaindia.com/sites/default/files/2015/10/10/384058-deepika-fhm.jpg" alt="deepika padukone" width="200" height="200"/>-->
+           <!--<img src="http://images.indianexpress.com/2016/01/ritikasingh1.jpg" alt="ritika singh" width="400" height="200"/>-->
+           <img src="http://www.latestsongsnews.com/wp-content/uploads/2012/09/Alia-Bhatt-hot-pics.jpg" alt="Alia Bhatt" width="200" height="200"/>
        </div>
        <script>
 
@@ -25,12 +36,36 @@
            // changing the content of a tag
            // changing attributes(src,href,etc)
 
+             var targeth1= document.querySelector('h1');
+           targeth1.style.color= 'green';
+           //or
+           targeth1.classList.add('highlight');//add the class
+           targeth1.classList.remove('highlight');//remove the class
+           targeth1.classList.toggle('highlight');//insert the class if not there and remove it if its there
 
 
+            //changing the content using textContent
+           var para= document.querySelector('#first');
+           console.log(para.textContent);
+           para.textContent='Im changed for some reasons';
+           console.log(para.textContent);
+           var list= document.getElementsByTagName('li')[0];
+           var inner= list.innerHTML
+           console.log(inner)
 
+           //changing attributes  using getAttribute and setAttribute
 
+           var anc= document.querySelector('a');
+           console.log(anc.getAttribute('href'));
 
+           var img= document.querySelector('img');
+           img.setAttribute('src','http://www.cinepunch.in/wp-content/uploads/2016/02/Ritika-Singh-Stills-6.jpg')
 
+           //********practice with google page********
+
+          // var links= document.getElementsByTagName('a');
+
+           //for(var i=0; i<links.length; i++){console.log(links[i].textContent)};
 
        </script>
 
