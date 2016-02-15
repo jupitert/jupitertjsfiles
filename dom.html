@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+
+           <h2>DOM Explorer</h2>
+           <div class="card-panel hoverable"> Hoverable Card Panel</div>
+
+          <ul>
+              <li id="first">This is first item</li>
+              <li class="item">This is second item</li>
+              <li class="item">This is third item</li>
+              <li class="item">This is four item</li>
+          </ul>
+
+       </div>
+       <script>
+
+           var h2= document.querySelector('h2');
+           h2.style.color='#006699';
+           var isBlue= false;
+           setInterval(function(){
+               if(isBlue){
+                   h2.style.color='white'
+               }
+               else{
+                   h2.style.color='#006699';
+               }
+               isBlue= !isBlue;
+           },1000)
+
+           var test= document.getElementsByClassName('item');
+
+           //Exercise
+
+
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>

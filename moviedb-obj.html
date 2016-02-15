@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+           <h4>Objects</h4>
+
+       </div>
+       <script>
+
+           var movieDB= [
+               {
+                   title:'Aliens',
+                   rating: 5,
+                   hasWatched: true
+               },
+               {
+                   title:'Predator',
+                   rating: 4.5,
+                   hasWatched: false
+               },
+               {
+                   title:'Mad Max',
+                   rating: 5,
+                   hasWatched: true
+               },
+               {
+                   title:'Casino Royale',
+                   rating: 4,
+                   hasWatched: false
+               }
+           ]
+
+           movieDB.forEach(function(movie){
+//               if(movie.hasWatched) {
+//                   console.log('You have' + ' seen "' + movie.title + '" - ' + movie.rating + ' stars');
+//               }
+//               else{
+//                   console.log('You have' + ' not seen "' + movie.title + '" - ' + movie.rating + ' stars');
+//               }
+
+               console.log(printDB(movie));
+
+
+           })
+           function printDB(movie){
+               var result= 'you have ';
+               if(movie.hasWatched) {
+                   result += 'watched ';
+               }
+               else{
+                   result+='not seen ';
+               }
+
+               result+= '\"'+movie.title+'\"'+' - '+ movie.rating+ ' stars';
+               return result;
+           }
+
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>

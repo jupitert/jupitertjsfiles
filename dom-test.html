@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    </head>
+    <body>
+
+       <div class="container">
+           <h1>I'm an h1!</h1>
+           <p id="first" class="special">Hello</p>
+           <p class="special"> Good Bye</p>
+           <p>Hi Again!</p>
+           <p id="last">Good Bye again!</p>
+       </div>
+       <script>
+        //four different ways to select first p tag
+
+           var one= document.getElementById('first');
+           var two= document.getElementsByClassName('special')[0];
+           var three= document.querySelector('.special');
+           var four=document.querySelector('p');
+        var five= document.querySelector('h1 + p')
+           console.log(five);
+
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>
