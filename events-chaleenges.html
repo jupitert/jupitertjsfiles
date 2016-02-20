@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+        <style>
+            .change{
+                background: pink;
+            }
+        </style>
+    </head>
+    <body>
+
+
+       <div class="container">
+
+           <h2>EVENTS Explorer</h2>
+
+           <button class="btn"><i class="large mdi-navigation-menu"></i> </button>
+
+
+       </div>
+       <script>
+
+       //DOM Events.... addEvenListener... element.addEventListener(type, functionToCall);
+
+           var btn= document.querySelector('.btn');
+           var x= document.querySelector('body');
+           var isBlue= false;
+
+           btn.addEventListener('click', function(){
+               if(isBlue){
+                   document.body.style.background='white';
+                  // isBlue=false;
+               }
+               else{
+                   document.body.style.background='purple';
+                  // isBlue=true;
+               }
+               isBlue= !isBlue;
+               //x.classList.toggle('change');
+           });
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>

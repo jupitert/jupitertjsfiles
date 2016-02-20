@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    </head>
+    <body>
+
+
+       <div class="container">
+
+           <h2>DOM Explorer</h2>
+           <div class="card-panel hoverable"> Hoverable Card Panel</div>
+
+          <ul>
+              <li id="first test">This is first item</li>
+              <li class="item test">This is second item</li>
+              <li class="item test">This is third item</li>
+              <li class="item test">This is four item</li>
+          </ul>
+
+           <button class="btn"><i class="large mdi-navigation-menu"></i> </button>
+           <p>Im gonna change</p>
+
+       </div>
+       <script>
+
+       //DOM Events.... addEvenListener... element.addEventListener(type, functionToCall);
+        var events= document.querySelector('.btn');
+        events.addEventListener('click', function(){
+            document.querySelector('p').textContent='Im changed';
+            //alert(this.textContent);
+        })
+
+       var lis= document.querySelectorAll('li');
+           for (var i=0; i<lis.length; i++){
+               lis[i].addEventListener('click', getMe)
+           }
+
+           function getMe(){
+               alert(this.textContent);
+           }
+
+       </script>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </body>
+</html>
